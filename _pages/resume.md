@@ -6,15 +6,17 @@ author_profile: false
 
 ## 안녕하세요!
 
-웹 어플리케이션 개발자이자 프로젝트 관리자 전창민입니다.
+결제·예약 도메인의 백엔드 개발자 전창민입니다.
 
-다양한 도메인에서 프로젝트 관리 및 개발 경험을 가지고 있습니다.
+하나투어에서 5년 넘게 Java·Spring 기반 결제·예약 시스템을 개발하고 있습니다.
 
-이를 바탕으로 요구사항 정의에서 구현까지 원스탑으로 이슈를 해결한 경험이 다수 있습니다.
+요구사항이 바뀌어도 버틸 수 있는 구조, 장애가 나도 원인을 빠르게 추적할 수 있는 구조를 만드는 일에 가장 몰입합니다.
 
-따라서 비즈니스 관점의 문제 발굴과 IT 관점 해결방안 수립이 가능합니다.
+직접 설계한 결제 구조는 4년째 결제 시스템의 뼈대로 쓰이고 있고, 장애 원인 파악 시간을 이틀에서 15분 안팎으로 줄였습니다.
 
-고객과 개발자 간에 소통하며 니즈를 파악하고, 납득가능한 결과를 도출해 낼 수 있습니다.
+최근에는 AI 에이전트로 레거시 API 이관을 자동화하고 있습니다.
+
+그 전에는 롯데정보통신에서 11년간 PM·PL과 개발자로 일하며, 고객과 개발자 사이에서 요구사항을 정리하고 결과를 만들어 왔습니다.
 
 ### Contact
 
@@ -24,10 +26,26 @@ github : [https://github.com/cmjeon](https://github.com/cmjeon){:target="_blank"
 
 ### 운영중인 서비스
 
+#### 독서 노트 앱
+
+[BookPunch](https://apps.apple.com/kr/app/bookpunch-%EB%B6%81%ED%8E%80%EC%B9%98-%EB%82%98%EB%A7%8C%EC%9D%98-%EB%8F%85%EC%84%9C-%EB%85%B8%ED%8A%B8/id6739528036){:target="_blank"}
+
+- 1인 기획·개발·운영, iOS·Android·macOS 출시 (App Store 평점 4.9)
+- Flutter(Riverpod, go_router) 앱 개발
+- Java 21, Spring Boot 백엔드 개발
+- PostgreSQL, pgvector + bge-m3 임베딩 기반 의미 검색으로 발췌와 질문을 연결
+- Python(FastAPI, FastMCP) 기반 RAG 서버 구축, Claude 등 AI 클라이언트에서 발췌 검색 지원
+- 자체 중앙 인증서버로 인증 이관, MCP OAuth 연동
+- ML Kit OCR 노트 입력, FCM 푸시
+- 홈서버에 Jenkins, Docker, HashiCorp Vault 기반 배포·시크릿 관리 체계 구축
+
+### 사이드 프로젝트
+
 #### 목표관리 및 공유 앱 
  
 [DreamTodo](https://apps.apple.com/kr/app/dreamtodo-%EB%93%9C%EB%A6%BC%ED%88%AC%EB%91%90/id1617527029){:target="_blank"}
 
+- 역할 : 백엔드 개발 (지금은 프론트엔드 개발자가 운영 중)
 - node.js, express.js 백엔드 개발
 - 테이블 설계(제3정규형 충족)
 - postgreSQL
@@ -41,6 +59,7 @@ github : [https://github.com/cmjeon](https://github.com/cmjeon){:target="_blank"
 
 [XTradingApp](https://apps.apple.com/kr/app/xtradingapp/id6450615991){:target="_blank"}
 
+- 역할 : 백엔드 개발 (지금은 프론트엔드 개발자가 운영 중)
 - SpringBoot 3.0, Java 17 백엔드 개발
 - 테이블 설계(제3정규형 충족)
 - JPA, postgreSQL
@@ -55,9 +74,11 @@ github : [https://github.com/cmjeon](https://github.com/cmjeon){:target="_blank"
 ### 보유기술
 
 - 프론트엔드 : Javascript(es6), Vue.js, HTML5, CSS3, jsp, jQuery 
-- 백엔드 : Java 17, Spring Framework 6, Spring Boot 3, JPA, node.js, Express
-- 데이터베이스 : PostgreSQL, Oracle 11g, MariaDB, Redis
-- Dev/Ops : Jenkins, Docker, Prometheus, Grafana
+- 모바일 : Flutter(Riverpod, go_router)
+- 백엔드 : Java 21, Spring Framework 6, Spring Boot 3, JPA, Python(FastAPI), node.js, Express
+- 데이터베이스 : PostgreSQL(pgvector), Oracle 11g, MariaDB, Redis
+- Dev/Ops : Jenkins, Docker, HashiCorp Vault, Prometheus, Grafana, Loki
+- AI : Claude Code, Codex, MCP(FastMCP), RAG(pgvector, bge-m3)
 - 기타 : git, MediaWiki, JIRA & Confluence
 
 ### 자격증
@@ -68,7 +89,7 @@ github : [https://github.com/cmjeon](https://github.com/cmjeon){:target="_blank"
 - 오라클 인증 자바 프로그래머 OCJP 1.6 (11.03.05)
 - 정보처리 기사 (09.06.01)
 
-## 이력 및 성과
+## 경력
 
 - 하나투어 2021년 10월 ~ 현재
 - 롯데정보통신 2010년 7월 ~ 2021년 9월
@@ -77,12 +98,52 @@ github : [https://github.com/cmjeon](https://github.com/cmjeon){:target="_blank"
 
 ### 온라인서비스 개발팀 (21.10 ~ 현재)
 
+#### 레거시 백엔드 종료에 따른 API 이관 (26.10 ~ 현재)
+
+- 역할 : 백엔드 (2인 프로젝트, 백엔드 단독)
+- 성과
+  - 레거시 백엔드 서버 종료에 따라 프론트엔드가 호출하던 API 약 250건 이관 진행
+  - 같은 요청을 기존·신규 서버에 보내 응답을 대조하는 방식으로 호환성 검증
+  - AI 에이전트 오케스트레이션(메인·워커 구조, 워커별 컨텍스트 격리)으로 반복 이관 작업 자동화
+  - 호출 비중을 근거로 1차 오픈 범위를 호출 상위 10개 API(전체 호출의 28.2%)로 좁히자고 제안
+
+#### 쿠폰시스템 고도화 (26.06 ~ 현재)
+
+- 역할 : 백엔드 (어드민 쿠폰 API, 쿠폰 테이블 구조 담당)
+- 성과
+  - 레거시 쿠폰시스템(Oracle)을 차세대 구조(MariaDB)로 이관
+  - 상품 유형 조건이 코드 문자열로 섞여 있던 쿠폰 조건 테이블을 속성별 테이블로 분리
+  - 데이터 약 180만 건을 DB 내부 일괄 이동(INSERT … SELECT)으로 옮겨 적재 시간 단축 (테스트 기준 예상 30분 이상 → 약 4분)
+  - '동작 동등성'을 이관 기준으로 정해, 이관 중 섞여 들어간 설계 변경 7곳을 원래 동작으로 복원
+
+#### 항공 + 호텔 취소 고도화 (26.05 ~ 현재)
+
+- 역할 : 백엔드
+- 성과 : 항공 당일취소(VOID) 실패와 API 무응답을 감지해 사용자에게 실패를 응답하고, 수동 조치에 필요한 예약 정보를 담아 담당자에게 즉시 알림
+
+#### 항공 여정 자동 변경 (26.02 ~ 26.04)
+
+- 역할 : 백엔드 (3인 프로젝트, 백엔드 단독)
+- 성과
+  - GDS AutoExchange 기반 항공 여정 자동 변경 개발 : 자사·공급사 이중 유효성 검증, 재발행 운임 조회, 리이슈/리발리 접수
+  - 결제 성공 후 변경이 실패하면 결제를 롤백하고, 롤백마저 실패하면 관리자에게 알림
+  - 화면설계서를 분석해 필요한 API 전량 구현
+
+#### 항공 결제 고도화 (25.06 ~ 26.01)
+
+- 역할 : 백엔드 (2인 프로젝트, 백엔드 단독)
+- 성과
+  - 프론트엔드 중심이던 레거시 항공 결제를 서버 중심의 4단계 결제 흐름으로 개편
+  - 쿠폰·상품권·마일리지·결제승인 처리 후 예약이 실패하면 역순으로 롤백하고, 롤백마저 실패하면 알림 발송
+  - 단계별 로그를 DB에 적재해 장애 원인 파악 시간 단축
+
 #### 항공 + 호텔 예약/결제 고도화 (24.07 ~ 현재)
 
 - 역할 : 백엔드
 - 성과
   - 호텔 다건 예약 및 취소프로세스 개발
   - 복합 자동 예약취소 프로세스 개발
+  - 여러 클래스에 흩어져 있던 결제 레거시를 결제 처리 유형별 구조로 엔드포인트 단위 점진 이관 (테스트 1,214개 전체 통과)
 
 #### 호텔 취소 고도화 (24.03 ~ 24.06)
 
@@ -119,6 +180,8 @@ github : [https://github.com/cmjeon](https://github.com/cmjeon){:target="_blank"
 
 - 역할 : 백엔드, 프론트엔드
 - 성과
+  - 결제를 예약정보 제출, 결제페이지 진입, 결제정보 제출, 결제승인 4단계로 나누고 단계마다 서버가 데이터를 쌓고 검증하는 구조 설계
+  - 이 구조를 호텔, 항공, 항공+호텔, 투어입장권 결제로 확장, 장애 원인 파악 시간 최소 이틀 → 15분 안팎
   - 결제관련 데이터 모델링, 테이블 설계
   - 기존 결제시스템 호출 API 의 마이그레이션 개발
   - 상품권 등록, 목록, 사용처리 화면 개발
@@ -158,7 +221,7 @@ github : [https://github.com/cmjeon](https://github.com/cmjeon){:target="_blank"
 #### 운영
 
 - 웹기반 증권솔루션 개발담당자로 'vue.js 기반 웹기반 거래시스템 프론트엔드' 개발 : 증권/파생/계좌 관련 30여 페이지 및 채널 개발
-- 'vuex 에 상태관리를 집중시킨 코딩컨벤션' 수립, 표준 개발 템플릿으로 제작하여 활용 : 개발속도를 향상 및 표준화
+- 'vuex 에 상태관리를 집중시킨 코딩컨벤션' 수립, 표준 개발 템플릿으로 제작하여 활용 : 개발 속도 향상 및 표준화
 
 ### 쇼핑몰 IT운영팀 (14.11 ~ 20.03)
 
@@ -169,7 +232,7 @@ github : [https://github.com/cmjeon](https://github.com/cmjeon){:target="_blank"
   - 개발자로 테이블 설계, 백엔드(Spring), 프론트엔드('jQuery, ajax') 개발
 - 성과
   - PM 으로 고객과 개발자간의 '소통창구' 가 되어 고객의 니즈를 이해하고 프로젝트 목표를 달성
-  - '반응형'/인터렉티브/기능 확장성에 염두에 둔 홈페이지, 예약자관리 기능이 있는 '관리자페이지' 를 개발
+  - '반응형'/인터랙티브/기능 확장성을 염두에 둔 홈페이지, 예약자관리 기능이 있는 '관리자페이지' 를 개발
 
 #### 컨벤션홀 예약/관리자 페이지 개선 (18.01 ~ 18.03)
 
@@ -253,6 +316,6 @@ github : [https://github.com/cmjeon](https://github.com/cmjeon){:target="_blank"
 - 영업시스템 유지운영
 - MS-SQL Stored Procedure 기반 예약시스템 관리
 
-### 학력
+## 학력
 
 - 국민대학교 정보시스템 전공
