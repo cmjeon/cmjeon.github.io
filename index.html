@@ -1,4 +1,40 @@
 ---
-layout: home
+layout: single
 author_profile: true
+classes: wide
+series:
+  - title: "토비의 스프링 3.1"
+    category: "토비의 스프링 3.1"
+  - title: "클린 코드 스터디"
+    category: "bookstudy - cleancode"
+  - title: "리팩터링 2판 스터디"
+    category: "bookstudy - refactoring2"
 ---
+
+<p>결제·예약 도메인의 백엔드 개발자 전창민입니다.</p>
+<p>배운 것을 기록합니다.</p>
+<p><a href="{{ '/resume' | relative_url }}" class="btn btn--primary">이력서 보기</a></p>
+
+<h2>대표 시리즈</h2>
+<div class="feature__wrapper" style="display: block;">
+  {% for series in page.series %}
+  {% assign anchor = series.category | slugify | downcase %}
+  <div class="feature__item">
+    <div class="archive__item">
+      <div class="archive__item-body">
+        <h3 class="archive__item-title" style="word-break: keep-all;">{{ series.title }}</h3>
+        <div class="archive__item-excerpt"><p>{{ site.categories[series.category].size }}편</p></div>
+        <p><a href="{{ '/categories/' | relative_url }}#{{ anchor }}" class="btn btn--inverse">시리즈 보기</a></p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<h2>최근 글</h2>
+<div class="entries-list">
+  {% for post in site.posts limit: 5 %}
+    {% include archive-single.html type="list" %}
+  {% endfor %}
+</div>
+<p><a href="{{ '/posts/' | relative_url }}">전체 글 보기 →</a></p>

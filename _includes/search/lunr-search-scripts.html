@@ -5,6 +5,34 @@
 {% else %}
   {% assign lang = "en" %}
 {% endcase %}
-<script src="{{ '/assets/js/lunr/lunr.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/lunr/lunr-store.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/lunr/lunr-' | append: lang | append: '.js' | relative_url }}"></script>
+<script>
+  // Loads the lunr search scripts in order the first time the search UI is opened.
+  (function () {
+    var sources = [
+      "{{ '/assets/js/lunr/lunr.min.js' | relative_url }}",
+      "{{ '/assets/js/lunr/lunr-store.js' | relative_url }}",
+      "{{ '/assets/js/lunr/lunr-' | append: lang | append: '.js' | relative_url }}"
+    ];
+    var started = false;
+
+    function loadFrom(index) {
+      if (index === sources.length) {
+        $('input#search').trigger('keyup');
+        return;
+      }
+      var script = document.createElement('script');
+      script.src = sources[index];
+      script.onload = function () { loadFrom(index + 1); };
+      document.body.appendChild(script);
+    }
+
+    function loadSearch() {
+      if (started) return;
+      started = true;
+      loadFrom(0);
+    }
+
+    $(document).on('click', '.search__toggle', loadSearch);
+    $(document).on('focus', 'input#search', loadSearch);
+  })();
+</script>

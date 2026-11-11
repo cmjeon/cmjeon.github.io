@@ -2,6 +2,8 @@
 main:
   - title: "Resume"
     url: /resume
+  - title: "Posts"
+    url: /posts/
   # - title: "About"
   #  url: /about
 #  - title: "Books"
@@ -26,11 +28,3 @@ books:
     children:
       - title: "세 번째 걸음"
         url: /books/10step-3step
-
-docs:
-  - title: Getting Started
-    children:
-      - title: "Quick-Start Guide"
-        url: /docs/quick-start-guide/
-      - title: "Structure"
-        url: /docs/structure/

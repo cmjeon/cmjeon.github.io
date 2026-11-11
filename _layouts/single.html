@@ -81,14 +81,26 @@ layout: default
         {% endif %}
     </article>
 
-    {% comment %}<!-- only show related on a post page when `related: true` --> {% endcomment %}
-    {% if page.id and page.related and site.related_posts.size > 0 %}
+    {% comment %}<!-- show up to 4 posts around this one (2 before, 2 after) in its first category, oldest first --> {% endcomment %}
+    {% assign related_category = page.categories | first %}
+    {% assign series = site.categories[related_category] | reverse %}
+    {% if page.id and page.related and series.size > 1 %}
+    {% assign current_index = 0 %}
+    {% for post in series %}
+    {% if post.id == page.id %}{% assign current_index = forloop.index0 %}{% break %}{% endif %}
+    {% endfor %}
+    {% assign start = current_index | minus: 2 %}
+    {% assign max_start = series.size | minus: 5 %}
+    {% if start > max_start %}{% assign start = max_start %}{% endif %}
+    {% if start < 0 %}{% assign start = 0 %}{% endif %}
     <div class="page__related">
         <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy"
             }}</h4>
         <div class="grid__wrapper">
-            {% capture category %}{{ page.categories | first }}{% endcapture %}
-            {% for post in site.categories[category] limit: 4 %}
+            {% for post in series offset: start limit: 5 %}
+            {% if post.id == page.id %}
+            {% continue %}
+            {% endif %}
             {% include archive-single.html type="grid" %}
             {% endfor %}
         </div>

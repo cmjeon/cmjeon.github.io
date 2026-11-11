@@ -610,6 +610,7 @@ tags:
       initialRouteName="Home"
       drawerType="front" // front slide permanent
       drawerPosition="right" // right left
+      {% raw %}
       drawerStyle={{
         backgroundColor: '#c6cbef',
         width: 200
@@ -618,6 +619,7 @@ tags:
         activeTintColor: 'red', // 선택된 메뉴의 폰트 컬러
         activeBackgroundColor: 'skyblue' // 선택된 메뉴의 배경 컬러
       }}
+      {% endraw %}
       drawerContent={
         props => <CustomDrawerContent {...props} />
       }
@@ -662,6 +664,7 @@ tags:
   <Drawer.Screen
     name="Home"
     component={DrawerHomeScreen}
+    {% raw %}
     options={{
       drawerIcon: ()=>(
         <Image
@@ -670,6 +673,7 @@ tags:
         >
       )
     }}
+    {% endraw %}
   >
   ...
   ~~~
@@ -689,7 +693,9 @@ tags:
         drawerIcon: () => (
           <Image
             source={Logo}
+            {% raw %}
             style={{width: 40, height: 40}}
+            {% endraw %}
           >
         )
       })
@@ -732,7 +738,9 @@ tags:
               <View style={styles.imageContainer}>
                 <Image
                   source={ Logo }
+                  {% raw %}
                   style={{ width: 40, height: 40 }}
+                  {% endraw %}
                 />
               </View>
               <Text style={styles.sectionHeading}>Section 1</Text>
@@ -756,7 +764,9 @@ tags:
               </View>
             </View>>
           </ScrollView>
+          {% raw %}
           <View style={{paddingLeft: 10, paddingBottom: 30}}>
+          {% endraw %}
             <Text>Copyright @ Wintho, 2020.</Text>
           </View>
         </View>
@@ -803,6 +813,7 @@ tags:
     initialRouteName="Home"
       drawerType="front"
       drawerPosition="right"
+      {% raw %}
       drawerStyle={{
         backgroundColor: '#c6cbef',
         width: 200
@@ -811,6 +822,7 @@ tags:
         activeTintColor: 'red',
         activeBackgroundColor: 'skyblue'
       }}
+      {% endraw %}
       drawerContent={
         props => <SideDrawer {...props} /> // CustomDrawerContent 대체
       }
