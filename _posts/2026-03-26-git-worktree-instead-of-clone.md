@@ -79,3 +79,10 @@ git worktree prune
 # 브랜치까지 지우기
 git branch -d feature/auth
 ```
+
+## 참고
+
+- [git-worktree Documentation (Git 공식 문서)](https://git-scm.com/docs/git-worktree)
+- [git worktree 사용법 (Dale Seo, 2024-06-30)](https://daleseo.com/git-worktree/)
+- [Git Worktree : 여러 개의 작업 트리 관리하기 (천재웅, 2025-01-09)](https://cheonjaeung.com/posts/git-worktree/)
+- [Git에서 다수의 워킹 디렉토리를 관리하는 worktree (Outsider, 2022-04-06)](https://blog.outsider.ne.kr/1588)
